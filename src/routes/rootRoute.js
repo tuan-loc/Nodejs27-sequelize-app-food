@@ -2,14 +2,18 @@ const express = require("express");
 const rootRoute = express.Router();
 const userRoute = require("./userRoute");
 const foodRoute = require("./foodRoute");
+const likeRoute = require("./likeRoute");
+const rateRoute = require("./rateRoute");
+const orderRoute = require("./orderRoute");
 
-// sử dụng middleware của express
 rootRoute.use("/user", userRoute);
 
-// food
 rootRoute.use("/food", foodRoute);
 
-// food
-// rootRoute.use("/food", foodRoute);
+rootRoute.use("/like", likeRoute);
+
+rootRoute.use("/rate", rateRoute);
+
+rootRoute.use("/order", orderRoute);
 
 module.exports = rootRoute;

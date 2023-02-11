@@ -1,0 +1,244 @@
+{
+	"info": {
+		"_postman_id": "ffe8ecbc-76a0-4647-bc9b-e9bea2dcaca6",
+		"name": "sequelize app food",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "like restaurant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\":\"3\",\r\n    \"dateLike\":\"2022-01-01 09:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/like/like/3",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"like",
+						"like",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "unlike restaurant",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\":\"3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/like/unLike/2",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"like",
+						"unLike",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lay danh sach like theo nha hang",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/like/getLikeListRestaurant/3",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"like",
+						"getLikeListRestaurant",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lay danh sach like theo user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/like/getLikeListUser/5",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"like",
+						"getLikeListUser",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "them danh gia",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\":\"3\",\r\n    \"amount\":\"0\",\r\n    \"dateRate\":\"2022-01-01 02:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/rate/addRate/2",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"rate",
+						"addRate",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lay danh sach danh gia theo nha hang",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/rate/getRateListRestaurant/2",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"rate",
+						"getRateListRestaurant",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lay danh sach danh gia theo user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/rate/getRateListUser/2",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"rate",
+						"getRateListUser",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\":\"2\",\r\n    \"foodId\":\"5\",\r\n    \"amount\":\"1\",\r\n    \"code\":\"abc123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/order/addOrder",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"order",
+						"addOrder"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
